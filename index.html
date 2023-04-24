@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Linktree Clone</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>WM LinkTree</h1>
+      <div class="avatar">
+        <img src="pictures/WalidProfilePic.jpeg" alt="Avatar" id="avatar-image">
+      </div>
+      <div class="avatar-text">
+        <h2>@Walid Mahmoud</h2>
+        <p>Senior DevSecOps Engineer.</p>
+      </div>
+      <a href="#" class="link-icon"><span>...</span></a>
+    </header>
+    <main>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/walidmahmoud1/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/Wa1idMahmoud" target="_blank">GitHub</a></li>
+        <li><a href="https://www.credly.com/users/walid-mahmoud.4e5fe529/badges" target="_blank">Credly</a></li>
+        <li><a href="https://medium.com/me/stories/public" target="_blank">Medium(Articles)</a></li>
+      </ul>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Linktree Clone</p>
+    </footer>
+    <script>
+      const linkIcon = document.querySelector('.link-icon');
+      const link = 'https://example.com/my-linktree-clone'; // Replace with your actual link
+
+      linkIcon.addEventListener('click', () => {
+        navigator.clipboard.writeText(link);
+        const popup = document.createElement('div');
+        popup.classList.add('popup');
+        popup.innerText = 'Link Copied';
+        document.body.appendChild(popup);
+        setTimeout(() => {
+          popup.remove();
+        }, 2000);
+      });
+    </script>
+    <div class="container">
+        <img src="Pictures/devops.png" alt="DevOps life Cycle" class="bottom-image">
+      </div>      
+  </body>
+</html>
